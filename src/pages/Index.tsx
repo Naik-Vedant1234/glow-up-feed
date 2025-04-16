@@ -7,7 +7,7 @@ import Post from "@/components/feed/Post";
 const posts = [
   {
     id: "p1",
-    username: "johndoe",
+    username: "Vedant",
     userImage: "https://i.pravatar.cc/150?img=1",
     location: "Los Angeles, California",
     image: "https://images.unsplash.com/photo-1682687220067-dced9a881b56?q=80&w=1170&auto=format&fit=crop",
@@ -18,7 +18,7 @@ const posts = [
   },
   {
     id: "p2",
-    username: "janedoe",
+    username: "Shravya",
     userImage: "https://i.pravatar.cc/150?img=5",
     image: "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=1170&auto=format&fit=crop",
     caption: "Morning coffee and productivity! ☕ #coffee #work #morningroutine",
@@ -28,7 +28,7 @@ const posts = [
   },
   {
     id: "p3",
-    username: "mike_smith",
+    username: "Tanish",
     userImage: "https://i.pravatar.cc/150?img=3",
     location: "New York City",
     image: "https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?q=80&w=1170&auto=format&fit=crop",

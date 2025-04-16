@@ -5,9 +5,9 @@ import ProfilePostsGrid from "@/components/profile/ProfilePosts";
 
 // Sample profile data
 const profileData = {
-  username: "johndoe",
-  fullName: "John Doe",
-  bio: "📷 Photographer & Travel Enthusiast\n🌎 Exploring the world one click at a time\n🏙️ Based in Los Angeles",
+  username: "vedant_naik",
+  fullName: "Vedant Naik",
+  bio: "Coder & Traveller \n🌎 Exploring the world one click at a time\n🏙️ Based in Los Angeles",
   profileImage: "https://i.pravatar.cc/150?img=1",
   postsCount: 42,
   followersCount: 1342,

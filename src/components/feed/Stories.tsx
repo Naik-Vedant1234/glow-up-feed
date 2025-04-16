@@ -7,16 +7,16 @@ import { Link } from "react-router-dom";
 
 // Sample story data
 const stories = [
-  { id: 1, username: "johndoe", image: "https://i.pravatar.cc/150?img=1", viewed: false },
-  { id: 2, username: "janedoe", image: "https://i.pravatar.cc/150?img=5", viewed: false },
-  { id: 3, username: "mike_smith", image: "https://i.pravatar.cc/150?img=3", viewed: true },
-  { id: 4, username: "sarahparker", image: "https://i.pravatar.cc/150?img=9", viewed: false },
-  { id: 5, username: "alex_wilson", image: "https://i.pravatar.cc/150?img=6", viewed: true },
-  { id: 6, username: "emmajones", image: "https://i.pravatar.cc/150?img=11", viewed: false },
-  { id: 7, username: "robert_smith", image: "https://i.pravatar.cc/150?img=12", viewed: false },
-  { id: 8, username: "olivia42", image: "https://i.pravatar.cc/150?img=20", viewed: true },
-  { id: 9, username: "david.brown", image: "https://i.pravatar.cc/150?img=17", viewed: false },
-  { id: 10, username: "sophie_green", image: "https://i.pravatar.cc/150?img=23", viewed: false },
+  { id: 1, username: "Vedant", image: "https://i.pravatar.cc/150?img=1", viewed: false },
+  { id: 2, username: "Shravya", image: "https://i.pravatar.cc/150?img=5", viewed: false },
+  { id: 3, username: "Tanish", image: "https://i.pravatar.cc/150?img=3", viewed: true },
+  { id: 4, username: "Alexa", image: "https://i.pravatar.cc/150?img=9", viewed: false },
+  { id: 5, username: "Ayush", image: "https://i.pravatar.cc/150?img=6", viewed: true },
+  { id: 6, username: "Prikesh", image: "https://i.pravatar.cc/150?img=11", viewed: false },
+  { id: 7, username: "Samarth", image: "https://i.pravatar.cc/150?img=12", viewed: false },
+  { id: 8, username: "Sara", image: "https://i.pravatar.cc/150?img=20", viewed: true },
+  { id: 9, username: "Siddhant", image: "https://i.pravatar.cc/150?img=17", viewed: false },
+  { id: 10, username: "Radha", image: "https://i.pravatar.cc/150?img=23", viewed: false },
 ];
 
 export default function Stories() {

@@ -11,7 +11,7 @@ const notifications = [
   {
     id: 1,
     type: "like",
-    user: { username: "janedoe", avatar: "https://i.pravatar.cc/150?img=5" },
+    user: { username: "Shravya", avatar: "https://i.pravatar.cc/150?img=5" },
     content: "liked your photo",
     postImage: "https://images.unsplash.com/photo-1682687220067-dced9a881b56?q=80&w=200&auto=format&fit=crop",
     time: "2m",
@@ -19,14 +19,14 @@ const notifications = [
   {
     id: 2,
     type: "follow",
-    user: { username: "mike_smith", avatar: "https://i.pravatar.cc/150?img=3" },
+    user: { username: "Tanish", avatar: "https://i.pravatar.cc/150?img=3" },
     content: "started following you",
     time: "10m",
   },
   {
     id: 3,
     type: "comment",
-    user: { username: "alex_wilson", avatar: "https://i.pravatar.cc/150?img=6" },
+    user: { username: "Ayush", avatar: "https://i.pravatar.cc/150?img=6" },
     content: "commented: \"Amazing shot! 📸\"",
     postImage: "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=200&auto=format&fit=crop",
     time: "1h",
@@ -34,7 +34,7 @@ const notifications = [
   {
     id: 4,
     type: "mention",
-    user: { username: "sarahparker", avatar: "https://i.pravatar.cc/150?img=9" },
+    user: { username: "Alexa", avatar: "https://i.pravatar.cc/150?img=9" },
     content: "mentioned you in a comment",
     postImage: "https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?q=80&w=200&auto=format&fit=crop",
     time: "3h",
@@ -42,14 +42,14 @@ const notifications = [
   {
     id: 5,
     type: "follow",
-    user: { username: "robert_smith", avatar: "https://i.pravatar.cc/150?img=12" },
+    user: { username: "Samarth", avatar: "https://i.pravatar.cc/150?img=12" },
     content: "started following you",
     time: "5h",
   },
   {
     id: 6,
     type: "like",
-    user: { username: "emmajones", avatar: "https://i.pravatar.cc/150?img=11" },
+    user: { username: "Prikesh", avatar: "https://i.pravatar.cc/150?img=11" },
     content: "liked your photo",
     postImage: "https://images.unsplash.com/photo-1682687220133-3fa6e6e80fc3?q=80&w=200&auto=format&fit=crop",
     time: "12h",

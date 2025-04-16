@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 
 // Sample search results
 const users = [
-  { id: 1, username: "johndoe", fullName: "John Doe", avatar: "https://i.pravatar.cc/150?img=1", isFollowing: false },
-  { id: 2, username: "janedoe", fullName: "Jane Doe", avatar: "https://i.pravatar.cc/150?img=5", isFollowing: true },
-  { id: 3, username: "mike_smith", fullName: "Mike Smith", avatar: "https://i.pravatar.cc/150?img=3", isFollowing: false },
-  { id: 4, username: "sarahparker", fullName: "Sarah Parker", avatar: "https://i.pravatar.cc/150?img=9", isFollowing: true },
-  { id: 5, username: "alex_wilson", fullName: "Alex Wilson", avatar: "https://i.pravatar.cc/150?img=6", isFollowing: false },
+  { id: 1, username: "vedant_naik", fullName: "Vedant Naik", avatar: "https://i.pravatar.cc/150?img=1", isFollowing: false },
+  { id: 2, username: "kalra_akshat", fullName: "Akshat Kalra", avatar: "https://i.pravatar.cc/150?img=5", isFollowing: true },
+  { id: 3, username: "ayush_kumar", fullName: "Ayush Kumar", avatar: "https://i.pravatar.cc/150?img=3", isFollowing: false },
+  { id: 4, username: "prikesh_kumar", fullName: "Prikesh Kumar", avatar: "https://i.pravatar.cc/150?img=9", isFollowing: true },
+  { id: 5, username: "tanish", fullName: "Tanish Kumar", avatar: "https://i.pravatar.cc/150?img=6", isFollowing: false },
 ];
 
 export default function Search() {
