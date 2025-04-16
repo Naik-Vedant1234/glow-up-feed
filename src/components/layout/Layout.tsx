@@ -1,7 +1,8 @@
 
 import TopNavbar from "./TopNavbar";
 import BottomNavbar from "./BottomNavbar";
-import { useLocation } from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
+import { useEffect } from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -10,9 +11,18 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const location = useLocation();
   const path = location.pathname;
+  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
   
   // Don't show navbar in auth pages
   const isAuthPage = path === "/login" || path === "/signup" || path === "/forgot-password";
+  
+  // If not authenticated and not on an auth page, redirect to login
+  useEffect(() => {
+    if (!isAuthenticated && !isAuthPage) {
+      // We use window.location instead of Navigate to force a full page reload
+      window.location.href = "/login";
+    }
+  }, [isAuthenticated, isAuthPage]);
   
   return (
     <div className="flex flex-col min-h-screen">

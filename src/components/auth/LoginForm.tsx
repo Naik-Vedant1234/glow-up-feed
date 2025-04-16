@@ -1,15 +1,17 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Mail, Lock, Instagram } from "lucide-react";
+import { Mail, Lock } from "lucide-react";
+import { toast } from "sonner";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +21,12 @@ export default function LoginForm() {
     // For this demo, we'll simulate a successful login after a delay
     setTimeout(() => {
       setLoading(false);
-      window.location.href = "/";
+      // Store authentication token in localStorage (in a real app)
+      localStorage.setItem("isAuthenticated", "true");
+      // Show success toast
+      toast.success("Login successful!");
+      // Redirect to home page
+      navigate("/home");
     }, 1500);
   };
   

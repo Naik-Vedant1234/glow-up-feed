@@ -8,7 +8,7 @@ export default function BottomNavbar() {
 
   return (
     <nav className="bottom-nav">
-      <Link to="/" className={`nav-link ${path === "/" ? "active" : ""}`}>
+      <Link to="/home" className={`nav-link ${path === "/home" ? "active" : ""}`}>
         <Home size={24} />
         <span className="text-xs mt-1">Home</span>
       </Link>
