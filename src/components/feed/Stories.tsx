@@ -2,7 +2,8 @@
 import { useRef } from "react";
 import Story from "./Story";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Sample story data
 const stories = [
@@ -37,9 +38,12 @@ export default function Stories() {
       >
         {/* Add Story Button */}
         <div className="flex flex-col items-center space-y-1">
-          <Button className="h-16 w-16 rounded-full" variant="outline">
-            <span className="text-xl">+</span>
-          </Button>
+          <Link to="/create-story">
+            <Button className="h-16 w-16 rounded-full relative" variant="outline">
+              <Plus className="h-6 w-6" />
+              <span className="sr-only">Add your story</span>
+            </Button>
+          </Link>
           <p className="text-xs">Your story</p>
         </div>
         

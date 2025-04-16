@@ -4,6 +4,8 @@ import { Avatar } from "@/components/ui/avatar";
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import CommentBox from "./CommentBox";
+import { toast } from "sonner";
 
 interface PostProps {
   id: string;
@@ -31,6 +33,8 @@ export default function Post({
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
   const [likeCount, setLikeCount] = useState(likes);
+  const [commentCount, setCommentCount] = useState(comments);
+  const [showComments, setShowComments] = useState(false);
   
   const handleLike = () => {
     if (liked) {
@@ -39,6 +43,15 @@ export default function Post({
       setLikeCount(likeCount + 1);
     }
     setLiked(!liked);
+  };
+  
+  const handleCommentAdded = () => {
+    setCommentCount(commentCount + 1);
+  };
+  
+  const handleShare = () => {
+    // In a real app, this would open a share dialog
+    toast.success("Share dialog opened!");
   };
   
   return (
@@ -85,11 +98,21 @@ export default function Post({
               <Heart className={`h-6 w-6 ${liked ? "fill-red-500 text-red-500" : ""}`} />
             </Button>
             
-            <Button variant="ghost" size="icon" className="h-9 w-9">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="h-9 w-9"
+              onClick={() => setShowComments(!showComments)}
+            >
               <MessageCircle className="h-6 w-6" />
             </Button>
             
-            <Button variant="ghost" size="icon" className="h-9 w-9">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="h-9 w-9"
+              onClick={handleShare}
+            >
               <Send className="h-6 w-6" />
             </Button>
           </div>
@@ -115,25 +138,42 @@ export default function Post({
           </p>
         </div>
         
-        {comments > 0 && (
-          <Link to={`/p/${id}`} className="text-muted-foreground text-sm mt-1 block">
-            View all {comments} comments
-          </Link>
+        {commentCount > 0 && (
+          <button 
+            className="text-muted-foreground text-sm mt-1 block"
+            onClick={() => setShowComments(!showComments)}
+          >
+            View all {commentCount} comments
+          </button>
         )}
         
         <p className="text-xs text-muted-foreground mt-1">{timestamp}</p>
       </div>
       
-      <div className="border-t px-3 py-2">
-        <div className="flex items-center">
-          <input
-            type="text"
-            placeholder="Add a comment..."
-            className="flex-1 bg-transparent text-sm outline-none"
-          />
-          <Button variant="ghost" className="text-primary text-sm font-semibold">Post</Button>
+      {showComments && (
+        <div className="px-3 py-2 border-t">
+          <div className="max-h-40 overflow-y-auto mb-3">
+            <div className="p-2 flex">
+              <Avatar className="h-7 w-7 mr-2">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Comment user" className="object-cover" />
+              </Avatar>
+              <div>
+                <p className="text-sm">
+                  <span className="font-semibold">janedoe</span> This looks amazing!
+                </p>
+                <p className="text-xs text-muted-foreground">2h</p>
+              </div>
+            </div>
+          </div>
+          <CommentBox postId={id} onCommentAdded={handleCommentAdded} />
         </div>
-      </div>
+      )}
+      
+      {!showComments && (
+        <div className="border-t px-3 py-2">
+          <CommentBox postId={id} onCommentAdded={handleCommentAdded} />
+        </div>
+      )}
     </div>
   );
 }

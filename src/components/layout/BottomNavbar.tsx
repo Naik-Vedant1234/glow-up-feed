@@ -18,7 +18,7 @@ export default function BottomNavbar() {
         <span className="text-xs mt-1">Search</span>
       </Link>
       
-      <Link to="/create" className={`nav-link ${path === "/create" ? "active" : ""}`}>
+      <Link to="/create-post" className={`nav-link ${path === "/create-post" ? "active" : ""}`}>
         <PlusSquare size={24} />
         <span className="text-xs mt-1">Create</span>
       </Link>
